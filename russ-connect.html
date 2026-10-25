@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a24">
+<title>Connect your lights • Luma Lighting Studio</title>
+<style>
+:root{color-scheme:dark;font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;background:#101823;color:#e5eeee}
+*{box-sizing:border-box}body{margin:0 auto;max-width:980px;padding:22px 18px 90px}
+header{display:flex;align-items:center;gap:14px;justify-content:space-between;border-bottom:1px solid #334653;padding:5px 0 22px;flex-wrap:wrap}
+header strong{letter-spacing:.09em;font-size:17px}a{color:#c5e3ea}header a{background:#293e49;padding:9px 14px;border-radius:8px;text-decoration:none}
+h1{font-weight:650;letter-spacing:-.04em;font-size:clamp(30px,5vw,46px);line-height:1.1;margin:29px 0 13px}
+h2{font-size:20px;margin:0 0 11px}h3{font-size:17px;margin:0 0 9px}
+p{color:#b5cbd0}small,.muted{font-size:12px;color:#8eaab3}
+.top{border:1px solid #587260;border-radius:11px;padding:16px 19px;background:#1f322c;color:#d9ecdd;margin:18px 0 24px}
+.top strong{color:#ecf6e7}.top p{color:#c5decf;margin:5px 0 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:11px;margin:19px 0 29px}
+.step{padding:16px;border:1px solid #375163;border-radius:10px;background:#192732}
+.step b{display:block;font-size:14px;margin-bottom:7px}.step p{margin:0;font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:13px}
+.card{border:1px solid #405a67;background:#192630;border-radius:12px;padding:20px;margin:0}
+.card ul,.card ol{padding-left:21px;color:#c8d7d7}
+.card li{margin:8px 0}.tag{display:inline-block;font-size:10px;letter-spacing:.1em;border-radius:5px;padding:3px 7px;background:#33443b;color:#c7dcbf;margin-bottom:8px}
+.note{margin:27px 0 14px;padding:16px;border:1px solid #8e6448;border-radius:10px;background:#2a2323;color:#e4c6b9}
+.note p{color:#decbc5}
+button,a{touch-action:manipulation}a:focus-visible{outline:2px solid #d0f9b1;outline-offset:3px}
+</style>
+</head>
+<body>
+<header><strong>◈ LUMA · LIGHTING STUDIO</strong><a href="./">Open Luma Lighting Studio</a></header>
+<main>
+<h1>Russ, here's how to connect your lights.</h1>
+<p>Use desktop <strong>Chrome or Edge</strong> on the computer attached to the equipment. The main studio stays in your browser. No developer's Mac is required.</p>
+<section class="top"><strong>Where to click, just like the Lightkey reference</strong>
+<p>Look in Luma's <strong>upper-left corner</strong> beside your project name and <strong>No output</strong>. Click <strong>DMX OUTPUT</strong>. Choose your connection method on the left, then follow its steps on the right.</p></section>
+<div class="steps" aria-label="Four steps to get started">
+ <div class="step"><b>1 · DMX OUTPUT</b><p>Upper-left button next to the show name.</p></div>
+ <div class="step"><b>2 · Choose interface</b><p>USB, Art-Net, sACN, or optional OLA.</p></div>
+ <div class="step"><b>3 · Match your fixtures</b><p>Exact device, fixture model, DMX mode and address.</p></div>
+ <div class="step"><b>4 · Safety first</b><p>Bench-check in simulation; arm only after verification.</p></div>
+</div>
+<section aria-label="Connection methods">
+<h2>Which one do you have?</h2>
+<div class="cards">
+ <article class="card"><span class="tag">USB CABLE TO COMPUTER</span><h3>USB-DMX interface</h3>
+ <ol><li>Plug the supported interface into this computer.</li><li>Choose <strong>USB Interfaces</strong> in Luma.</li><li>Select the exact make/model printed on the device.</li><li>Click <strong>Choose USB-DMX adapter</strong> and approve the browser's device picker.</li></ol>
+ <p>If your model isn't listed, don't guess by selecting a generic serial port. Some adapters require their own drivers or aren't browser-compatible.</p></article>
+ <article class="card"><span class="tag">ETHERNET OR WI-FI NODE</span><h3>Art-Net / sACN</h3>
+ <ol><li>Install the optional <a href="https://github.com/L1gh7C0d35/luma-lighting-demo/releases/tag/v0.2.1-bridge-reliability-preview">Luma Bridge preview for your Mac or Windows computer</a>.</li><li>Open its local pairing page at <strong>127.0.0.1:18787</strong> on that same machine and copy the private code.</li><li>In Luma click <strong>Connect local bridge</strong>; approve Local Network Access when Chrome/Edge asks.</li><li>Paste the code and type the lighting node's actual private IPv4 address.</li></ol>
+ <p>Art-Net and sACN send UDP through the optional local bridge. The webpage itself cannot send UDP directly.</p></article>
+ <article class="card"><span class="tag">SPECIALIST HARDWARE</span><h3>Other / OLA</h3>
+ <ol><li>Check the interface's manufacturer and exact model.</li><li>If the device needs a local driver/OLA service, choose <strong>Other / OLA</strong>.</li><li>Set up the supported driver/ports separately and inspect the local device list.</li></ol>
+ <p>Not all Lightkey-compatible USB interfaces work directly from the browser. Do not substitute a different model.</p></article>
+ </div>
+</section>
+<section class="note"><h2>Never arm until the physical rig is verified</h2>
+<p>Import the correct source-pinned Open Fixture Library profile and match the fixture's real DMX mode, address and universe. Check movement/bright-light hazards and an independent physical power cutoff. Luma requires separate arm confirmations. STOP USB OUTPUT or STOP NETWORK OUTPUT stays available while live, but no software packet guarantees a lamp is dark.</p>
+</section>
+<p><strong>For an exact compatibility check:</strong> Send the adapter manufacturer's name and model, plus each light's fixture model, DMX mode and address. Photos of the labels/screens are helpful. You do not need to arm anything just to identify it.</p>
+<p class="muted">Developer preview: supported browser/device combinations and bridge downloads are not physically certified; Mac Apple Silicon and Windows package execution has not yet been verified on those platforms. The guide never performs device discovery or sends lighting output.</p>
+<p><a href="./">Back to Luma Lighting Studio</a></p>
+</main>
+</body>
+</html>
