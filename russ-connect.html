@@ -32,19 +32,18 @@ button,a{touch-action:manipulation}a:focus-visible{outline:2px solid #d0f9b1;out
 <main>
 <h1>Russ, here's how to connect your lights.</h1>
 <p>Use desktop <strong>Chrome or Edge</strong> on the computer attached to the equipment. The main studio stays in your browser. No developer's Mac is required.</p>
-<section class="top"><strong>Where to click, just like the Lightkey reference</strong>
-<p>Look in Luma's <strong>upper-left corner</strong> beside your project name and <strong>No output</strong>. Click <strong>DMX OUTPUT</strong>. See all DMX interfaces as a searchable list immediately. Choose the manufacturer at the left and the model at the right. Use Lights &amp; fixtures to browse hundreds of fixture brands and their source-listed models. Continue only for an implemented connection route.</p></section>
-<div class="steps" aria-label="Four steps to get started">
- <div class="step"><b>1 · DMX OUTPUT</b><p>Upper-left button next to the show name.</p></div>
- <div class="step"><b>2 · Brand and model</b><p>Read the device label; choose its exact model.</p></div>
- <div class="step"><b>3 · Continue</b><p>Follow model-specific USB or network steps.</p></div>
- <div class="step"><b>4 · Safety first</b><p>Bench-check in simulation; arm only after verification.</p></div>
+<section class="top"><strong>Start with Luma's new three-step light setup</strong>
+<p>Open <strong>Luma Lighting Studio</strong>, then click the lightbulb <strong>Setup</strong> button in the upper-left corner (or <strong>FIXTURES &amp; PATCH</strong>). At the top of the setup screen, follow <strong>1 Add light → 2 Set address → 3 Connect controller</strong>. On a phone, the last step simply says <strong>Connect</strong>. Select the actual fixture model and exact DMX mode before assigning its universe/address. To connect a supported adapter, use <strong>DMX OUTPUT</strong>—this opens the connection chooser. Browsing and editing in simulation never requires arming a real light.</p></section>
+<div class="steps" aria-label="Three steps to set up your lights">
+ <div class="step"><b>1 · Add light</b><p>Choose the actual manufacturer, model and DMX mode. A catalog listing alone does not prove hardware support.</p></div>
+ <div class="step"><b>2 · Set address</b><p>Match the real light's DMX address and universe; check for patch conflicts in simulation.</p></div>
+ <div class="step"><b>3 · Connect</b><p>Choose USB, network or unsure in DMX Output. Identify your actual controller. Do not arm without a supervised rig check.</p></div>
 </div>
 <section aria-label="Connection methods">
 <h2>Which one do you have?</h2>
 <div class="cards">
  <article class="card"><span class="tag">USB CABLE TO COMPUTER</span><h3>USB-DMX interface</h3>
- <ol><li>Plug the supported interface into this computer.</li><li>Open <strong>DMX OUTPUT</strong> and search/select the actual adapter.</li><li>Select the exact make/model printed on the device.</li><li>Click <strong>Choose USB-DMX adapter</strong> and approve the browser's device picker.</li></ol>
+ <ol><li>Plug the supported interface into this computer.</li><li>Open <strong>DMX OUTPUT</strong> (the third Setup step also takes you there).</li><li>Choose <strong>USB adapter</strong>, then select the exact manufacturer and model printed on the device.</li><li>Continue into the supported model-specific setup and approve the browser's device picker only when prompted.</li></ol>
  <p>If your model isn't listed, don't guess by selecting a generic serial port. Some adapters require their own drivers or aren't browser-compatible.</p></article>
  <article class="card"><span class="tag">ETHERNET OR WI-FI NODE</span><h3>Art-Net / sACN</h3>
  <ol><li>Install the optional <a href="https://github.com/L1gh7C0d35/luma-lighting-demo/releases/tag/v0.2.2-routing-preview">Luma Bridge preview for your Mac or Windows computer</a>.</li><li>Open its local pairing page at <strong>127.0.0.1:18787</strong> on that same machine and copy the private code.</li><li>In Luma click <strong>Connect local bridge</strong>; approve Local Network Access when Chrome/Edge asks.</li><li>Paste the code and type the lighting node's actual private IPv4 address.</li></ol>
