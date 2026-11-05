@@ -1,10 +1,10 @@
 {
   "product": "Luma Lighting Studio",
   "deployment": "public-simulation-preview",
-  "sourceCommit": "735b8672dc75ce27a7b84a73c1e6fe2e9a40d799",
+  "sourceCommit": "ab40c6b8f8b53a7f2067cd9b37f95415a18d9f6f",
   "sourceBranch": "release/luma-wui23-integrated-20261102",
-  "publishedAt": "2026-11-05T01:44:13.691Z",
-  "indexSha256": "708f3cf10ac7e03845e6d6326aa50e19beaf8cedfde6e907b77bbbb39681474b",
+  "publishedAt": "2026-11-05T03:02:44.428Z",
+  "indexSha256": "b7882c4e317e83f963a26486bcc199d4cb44a2cdfcda215bf3e6d8d685befa16",
   "concertAudioSha256": "28259443e1750ddf4fddc0e434e78849e960d32387c9dcdc5eba2918d16dec10",
   "uncleSetupSha256": "933b243abd2068d9f7bdbc206eebf48b4a184680fdbae98feb8c6fffbd998901",
   "hardwareCertified": false,
